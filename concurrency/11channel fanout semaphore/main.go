@@ -1,8 +1,8 @@
 /*
 Channel Fanout Semaphore.
-The idea is here is to do a fanout which spawns many Go routines
-writing they're result to 1 channel,and have 1 worker that
-consume the data they produce.
+The idea here is to do a fanout which spawns many Go routines
+writing their result to 1 channel, and have 1 worker that
+consumes the data they produce.
 To limit the number of Go routines posting to the channel
 at the same time we can create a semaphore (semaphoreNR), which is
 another channel with the len set to the number of Go
